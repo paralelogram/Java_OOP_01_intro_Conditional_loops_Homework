@@ -7,16 +7,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int year;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("input year");
-        year = scanner.nextInt();
 
-        if (year % 4 != 0 || year % 100 == 0 && year % 400 == 1) {
-            System.out.println(false);
+        int height;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("input height of tree: ");
+        height = scanner.nextInt();
+
+        for (int i = 1; i <= height; i++){
+            for (int j = 2; j <= height + i; j++) {
+                if (j <= (height - i + 1) ) {
+                    System.out.print(" ");
+                }
+                else {
+                    System.out.print("*");
+                }
+            }
+            System.out.println();
         }
-        else {
-            System.out.println(true);
-        }
+        //happy New Year!!!
     }
 }
