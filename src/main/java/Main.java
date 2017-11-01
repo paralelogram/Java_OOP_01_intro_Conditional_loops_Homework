@@ -12,7 +12,7 @@ public class Main {
         System.out.println("input year");
         year = scanner.nextInt();
 
-        if (year % 4 != 0 || year % 100 == 0 && year % 400 == 1) {
+        if (year % 4 != 0 || year % 100 == 0 && year % 400 == 1) { // у цьому рядку не правильно записана умова перевырки дылення на 400
             System.out.println(false);
         }
         else {
