@@ -11,7 +11,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("input year");
         year = scanner.nextInt();
-
+        if (year <= 0){
+            throw new NumberFormatException();
+        }
         if (year % 4 != 0 || year % 100 == 0 && year % 400 == 1) {
             System.out.println(false);
         }
